@@ -40,5 +40,39 @@ ul{
 #plus {
     margin-left: auto;
 }
-
+.footer{
+    position:absolute;
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    bottom: 50px;
+}
+a{
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+}
+.library{
+    position: relative;
+    min-height: 74vh;
+}
+.lang{
+    height: 25px;
+    width: 110px;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius:30px;
+}
+.lang img{
+    padding: 0;
+    margin: 5px;
+    height: 42px;
+    width:15px;
+}
 
