@@ -4,12 +4,10 @@
 }
 .flex{
     display: flex;
+    align-items: center;
 }
 .justify-center{
     justify-content: center;
-}
-.item-center{
-    align-items: center;
 }
 .bg-color{
     background-color: black;

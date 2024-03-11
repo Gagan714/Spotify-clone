@@ -29,11 +29,16 @@ font-style: normal;
     margin: 5px;
 }
 .library img{
-    width: 14px;
+    width: 23px;
     gap: 15px;
     padding: 5px;
+    margin:5px;
 }
 ul{
     padding-inline-start: 0px;
 }
+#plus {
+    margin-left: auto;
+}
+
 
