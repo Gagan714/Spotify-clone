@@ -9,10 +9,11 @@ font-weight: 700;
 font-style: normal;
 }
 .left{
-    width: 25vw;
+    width: 20vw;
 }
 .right{
-    width: 75vw;
+    width: 80vw;
+    height: 95vh;
 }
 .home ul li{
     list-style-type: none;
@@ -20,13 +21,16 @@ font-style: normal;
     gap: 15px;
     padding: 5px;
 }
-.home{
+.home {
     padding: 10px;
-    margin: 5px;
+    margin: 4px;
+    margin-right: 8px;
+    height: 20vh;
 }
 .library{
     padding: 10px;
-    margin: 5px;
+    margin: 4px;
+    margin-right: 8px;
 }
 .library img{
     width: 23px;
@@ -54,7 +58,7 @@ a{
 }
 .library{
     position: relative;
-    min-height: 74vh;
+    min-height:70vh;
 }
 .lang{
     height: 25px;
@@ -75,4 +79,67 @@ a{
     height: 42px;
     width:15px;
 }
+.nav img{
+    padding: 20px;
+    margin: 0px;
+    height: 42px;
+    width:15px;
+}
+.header{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    position: relative;
+    background-color: #181818
+}
+.buttons {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.sign{
+    background-color: #181818;
+    color: white;
+    font-size: medium;
+    border: 1px solid #181818;
+    font-weight: bold;
+    margin: 34px;
+}
+.login{
+    background-color: white;
+    color:black;
+    font-size: medium;
+    border-radius: 40px;
+    height: 50px;
+    width: 120px;
+    font-weight: bold;
+}
+h2{
+    margin: 0;
+}
+.spotifyPlaylists{
+    padding: 16px;
+}
+.cardcontainer{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.card{
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #181818;
+}
+.card >*{
+    padding-top: 2px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+
 
