@@ -20,6 +20,7 @@ font-style: normal;
     width: 14px;
     gap: 15px;
     padding: 5px;
+    margin-top: 30px;
 }
 .home {
     padding: 10px;
@@ -87,7 +88,7 @@ a{
 }
 .header{
     display: flex;
-    height: 100px;
+    height: 70px;
     justify-content: space-between;
     position: relative;
     background-color: #181818
