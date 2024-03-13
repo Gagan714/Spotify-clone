@@ -204,7 +204,12 @@ h2{
     position: sticky;
     bottom: 0;
     padding: 10px;
-    background-color: aqua;
+    background-color: #777575;
+}
+.playbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 
