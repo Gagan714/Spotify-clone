@@ -135,6 +135,8 @@ h2{
     padding: 10px;
     border-radius: 5px;
     background-color: #181818;
+    position: relative;
+    overflow: hidden;
 }
 .card >*{
     padding-top: 2px;
@@ -143,5 +145,31 @@ h2{
     width: 100%;
     object-fit: contain;
 }
+.spotify-button {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #1DB954;
+    border-radius: 50%; 
+    position: absolute;
+    overflow: hidden;
+    bottom: 136px;
+    right: 17px;
+    transition: opacity 1s;
+  }
+  .card:hover .spotify-button {
+    display: block;
+}
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background-color: #000;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+  }
+
 
 
