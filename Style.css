@@ -204,12 +204,18 @@ h2{
     position: sticky;
     bottom: 0;
     padding: 10px;
-    background-color: #777575;
+    background-color: #d6d3d3;
 }
 .playbuttons{
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+.songlist ul{
+    padding: 0 42px;
+}
+.songlist ul li{
+    list-style: none;
 }
 
 
