@@ -200,6 +200,12 @@ h2{
     background-color: #000;
     clip-path: polygon(0 0, 0 100%, 100% 50%);
   }
+  .playbar {
+    position: sticky;
+    bottom: 0;
+    padding: 10px;
+    background-color: aqua;
+}
 
 
 
