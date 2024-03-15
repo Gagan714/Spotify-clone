@@ -259,8 +259,10 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 10px;
+    height: 30px;
     position: absolute;
-    left:45%;
+    left: 45%;
+    width: 110px;
 }
 
 .songlist ul {
@@ -280,8 +282,7 @@ h2 {
 }
 
 .songinfo{
-    font-size: 14px;
-    width: 344px;
+    font-size: 23px;
 }
 
 .playnow {
@@ -322,7 +323,7 @@ h2 {
 .abovebar{
     display: flex;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 .hamburger{
     display: none;
@@ -369,16 +370,25 @@ h2 {
     .seekbar{
         width: 96%;
     }
-    .songinfo{
-        height:31px;
-        width:130px;
+    .cardcontainer{
+        justify-content: center;
+        margin: 0;
     }
-    .songtime{
-        width: 100px;
-        right: 10px;
+    .card{
+        width: 90vw;
     }
-    .playbuttons{
-        left:40%;
+    .abovebar{
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
     }
-    
+    .playbuttons {
+        display: flex;
+        justify-content: center;
+        position: static;
+        left: auto;
+        gap: 10px;
+        height: 30px;
+        width: 110px;
+    }
 }
