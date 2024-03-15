@@ -1,83 +1,94 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
-
-*{
-margin: 0;
-padding: 0;
-font-family: "Roboto", sans-serif;
-font-weight: 700;
-font-style: normal;
-background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap') * {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: black;
 }
-.left{
+
+.left {
     width: 20vw;
 }
-.right{
+
+.right {
     width: 80vw;
     height: 95vh;
     position: relative;
     overflow-y: scroll;
 }
-.home ul li{
+
+.home ul li {
     list-style-type: none;
     width: 14px;
     gap: 15px;
     padding: 5px;
     margin-top: 30px;
 }
+
 .home {
     padding: 10px;
     margin: 4px;
     margin-right: 8px;
     height: 20vh;
 }
-.home a{
+
+.home a {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: medium;
-    background-color:#121212;
+    background-color: #121212;
     color: rgb(167, 165, 165);
     border-radius: 1px solid #121212;
 
 }
-.home a:hover{
+
+.home a:hover {
     font-size: 1.05rem;
     color: white;
 }
-.library{
+
+.library {
     padding: 10px;
     margin: 4px;
     margin-right: 8px;
 }
-.library img{
+
+.library img {
     width: 23px;
     gap: 15px;
     padding: 5px;
-    margin:5px;
+    margin: 5px;
 }
-ul{
+
+ul {
     padding-inline-start: 0px;
 }
+
 #plus {
     margin-left: auto;
 }
-.footer{
-    position:absolute;
+
+.footer {
+    position: absolute;
     display: flex;
     gap: 22px;
     flex-wrap: wrap;
     bottom: 50px;
 }
-a{
+
+a {
     font-size: 10px;
     color: white;
     text-decoration: none;
 }
-.library{
+
+.library {
     position: relative;
-    min-height:70vh;
+    min-height: 70vh;
 }
-.lang{
+
+.lang {
     height: 25px;
     width: 110px;
     position: absolute;
@@ -88,21 +99,24 @@ a{
     justify-content: center;
     align-items: center;
     border: 1px solid white;
-    border-radius:30px;
+    border-radius: 30px;
 }
-.lang img{
+
+.lang img {
     padding: 0;
     margin: 5px;
     height: 42px;
-    width:15px;
+    width: 15px;
 }
-.nav img{
+
+.nav img {
     padding: 20px;
     margin: 0px;
     height: 42px;
-    width:15px;
+    width: 15px;
 }
-.header{
+
+.header {
     display: flex;
     height: 70px;
     justify-content: space-between;
@@ -111,6 +125,7 @@ a{
     z-index: 1;
     background-color: #181818
 }
+
 .buttons {
     margin: 5px;
     padding: 5px;
@@ -119,7 +134,8 @@ a{
     justify-content: center;
     align-items: center;
 }
-.sign{
+
+.sign {
     background-color: #181818;
     color: rgb(167, 165, 165);
     font-size: medium;
@@ -128,13 +144,15 @@ a{
     margin: 34px;
     cursor: pointer;
 }
-.sign:hover{
+
+.sign:hover {
     font-size: 1.05rem;
     color: white;
 }
-.login{
+
+.login {
     background-color: white;
-    color:black;
+    color: black;
     font-size: medium;
     border-radius: 40px;
     height: 50px;
@@ -142,55 +160,78 @@ a{
     font-weight: bold;
     cursor: pointer;
 }
-.login:hover{
+
+.login:hover {
     font-size: 1.05rem;
     color: black;
     background-color: white;
     font-weight: bolder;
+    height: 52px;
+    width: 122px;
 }
-h2{
+
+h2 {
     margin: 0;
 }
-.spotifyPlaylists{
+
+.spotifyPlaylists {
     padding: 16px;
 }
-.cardcontainer{
+
+.cardcontainer {
     display: flex;
     margin: 20px;
     gap: 10px;
     flex-wrap: wrap;
 }
-.card{
-    width: 195px;
+
+.card {
+    width: 180px;
     padding: 10px;
     border-radius: 5px;
     background-color: #181818;
     position: relative;
     overflow: hidden;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-delay: 0.1s;
 }
-.card >*{
+
+.card>* {
     padding-top: 2px;
 }
-.card img{
+
+.card img {
     width: 100%;
     object-fit: contain;
 }
+
 .spotify-button {
-    display: none;
+    visibility: hidden;
     width: 50px;
     height: 50px;
     background-color: #1DB954;
-    border-radius: 50%; 
+    border-radius: 50%;
     position: absolute;
     overflow: hidden;
     bottom: 136px;
     right: 17px;
-    transition: opacity 1s;
-  }
-  .card:hover .spotify-button {
-    display: block;
+    opacity: 0;
+    transition-property: opacity visibility;
+    transition-duration: 0.2s;
+    transition-delay: 0.1s;
 }
-  .play-icon {
+
+.card:hover {
+    background-color: #3c3c3c;
+}
+
+.card:hover .spotify-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+.play-icon {
     position: absolute;
     top: 50%;
     left: 53%;
@@ -199,24 +240,45 @@ h2{
     height: 18px;
     background-color: #000;
     clip-path: polygon(0 0, 0 100%, 100% 50%);
-  }
-  .playbar {
+}
+
+.playbar {
     position: sticky;
     bottom: 0;
     padding: 10px;
     background-color: #d6d3d3;
 }
-.playbuttons{
+
+.playbuttons {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-.songlist ul{
-    padding: 0 42px;
+
+.songlist ul {
+    height: 45vh;
+    overflow-y: scroll;
 }
-.songlist ul li{
+
+.songlist ul li {
     list-style: none;
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 13px 1px;
+    padding: 8px;
 }
 
+.playnow {
+    display: flex;
+}
 
-
+.playnow span {
+    font-size: 12px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
