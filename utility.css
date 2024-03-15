@@ -1,38 +1,42 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
 
-.flex{
-    display: flex;
-    align-items: center;
+.justify-center {
+  justify-content: center;
 }
-.justify-center{
-    justify-content: center;
+
+.bg-color {
+  background-color: black;
+  color: white;
 }
-.bg-color{
-    background-color: black;
-    color: white;
+
+.invert {
+  filter: invert(1);
 }
-.invert{
-    filter: invert(1);
+
+.bg-grey {
+  background-color: #121212;
+  color: white;
 }
-.bg-grey{
-    background-color: #121212;
-    color: white;
+
+.rounded {
+  border-radius: 7px;
 }
-.rounded{
-    border-radius: 7px;
-}
+
 ::-webkit-scrollbar {
-    width: 10px;
-  }
+  width: 10px;
+}
 
-  ::-webkit-scrollbar-track {
-    background: #333;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #555;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #777;
-  }
-  
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
