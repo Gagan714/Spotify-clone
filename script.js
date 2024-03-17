@@ -26,7 +26,9 @@ async function getsongs(folder) {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`/${folder}/`)[1])
+            let s=element.href.split(`/${folder}/`)[1]
+            s=s.replaceAll("%20"," ")
+            songs.push(s)
         }
     }
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
@@ -85,15 +87,10 @@ async function displayAlbums(){
         </div>`
         }
     }
-    Array.from(document.getElementsByClassName("card")).forEach(e=>{
-        e.addEventListener("click",async item=>{
-            console.log("Fetching Songs")
-            songs=await getsongs(`songs/${item.currentTarget.dataset.folder}`)
-            playMusic(songs[0],true)
-        })
-    })
 }
 async function main() {
+   await getsongs(`songs/3-Idiots`)
+    playMusic(songs[0],true)
     await displayAlbums()
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
     for (const song of songs) {
@@ -138,7 +135,9 @@ async function main() {
         document.querySelector(".left").style.left="-100%";
     })
     previous.addEventListener("click",()=>{
-        let index=songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        let G=currentSong.src.split("/").slice(-1)[0]
+        G=G.replaceAll("%20"," ")
+        let index=songs.indexOf(G)
         if((index-1)>=0){
             playMusic(songs[index-1])
         }else{
@@ -146,14 +145,21 @@ async function main() {
         }
     })
     next.addEventListener("click",()=>{
-        let index=songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        let G=currentSong.src.split("/").slice(-1)[0]
+        G=G.replaceAll("%20"," ")
+        let index=songs.indexOf(G)
         if((index+1)<songs.length){
             playMusic(songs[index+1])
         }else{
             playMusic(songs[0]);
         }
     })
-    
+    Array.from(document.getElementsByClassName("card")).forEach(e=>{
+        e.addEventListener("click",async item=>{
+            await getsongs(`songs/${item.currentTarget.dataset.folder}`)
+            playMusic(songs[0])
+        })
+    })
 }
 
 main()
