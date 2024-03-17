@@ -189,6 +189,7 @@ h2 {
 
 .card {
     width: 180px;
+    height: 300px;
     padding: 10px;
     border-radius: 5px;
     background-color: #181818;
@@ -206,8 +207,12 @@ h2 {
 
 .card img {
     width: 100%;
-    object-fit: contain;
+    object-fit:cover;
+    border-radius: 5px;
+    height: 70%;
 }
+
+
 
 .spotify-button {
     visibility: hidden;
