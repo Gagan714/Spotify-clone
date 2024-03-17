@@ -34,14 +34,14 @@ async function getsongs(folder) {
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
     songUL.innerHTML=""
     for (const song of songs) {
-        songUL.innerHTML = songUL.innerHTML + `<li><img src="music.svg" alt="" class="invert">
+        songUL.innerHTML = songUL.innerHTML + `<li><img src="Images/music.svg" alt="" class="invert">
         <div class="info">
             <div> ${song.replaceAll("%20", " ")}</div>
             <div>Sky</div>
         </div>
         <div class="playnow">
             <span>Play now</span>
-            <img src="play.svg" alt="" class="invert">
+            <img src="Images/play.svg" alt="" class="invert">
         </div>
         </li>`
     }
@@ -56,7 +56,7 @@ const playMusic=(track,pause=false)=>{
 currentSong.src=`/${currentplaylist}/`+track;
 if(!pause){
 currentSong.play();
-play.src="pause.svg"
+play.src="Images/pause.svg"
 }
 document.querySelector(".songinfo").innerHTML=decodeURI(track)
 document.querySelector(".songtime").innerHTML="00:00/00:00"
@@ -94,14 +94,14 @@ async function main() {
     await displayAlbums()
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
     for (const song of songs) {
-        songUL.innerHTML = songUL.innerHTML + `<li><img src="music.svg" alt="" class="invert">
+        songUL.innerHTML = songUL.innerHTML + `<li><img src="Images/music.svg" alt="" class="invert">
         <div class="info">
             <div> ${song.replaceAll("%20", " ")}</div>
             <div>Sky</div>
         </div>
         <div class="playnow">
             <span>Play now</span>
-            <img src="play.svg" alt="" class="invert">
+            <img src="Images/play.svg" alt="" class="invert">
         </div>
         </li>`
     }
@@ -113,10 +113,10 @@ async function main() {
     play.addEventListener("click",()=>{
         if(currentSong.paused){
             currentSong.play()
-            play.src="pause.svg"
+            play.src="Images/pause.svg"
         }else{
             currentSong.pause()
-            play.src="play2.svg"
+            play.src="Images/play2.svg"
         }
     })
     currentSong.addEventListener("timeupdate",()=>{
