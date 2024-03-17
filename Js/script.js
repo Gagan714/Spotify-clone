@@ -62,7 +62,7 @@ document.querySelector(".songinfo").innerHTML=decodeURI(track)
 document.querySelector(".songtime").innerHTML="00:00/00:00"
 }
 async function displayAlbums(){
-    let a = await fetch(`/songs/`)
+    let a = await fetch(`/Songs/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response
@@ -71,16 +71,16 @@ async function displayAlbums(){
     let array=Array.from(anchors)
     for (let index = 0; index < array.length; index++) {
         const e = array[index]; 
-        if (e.href.includes("/songs") && !e.href.includes(".htaccess")) {
+        if (e.href.includes("/Songs") && !e.href.includes(".htaccess")) {
         let folder=e.href.split("/").slice(-2)[0]
             // Get the metadata of the folder
-            let a = await fetch(`/songs/${folder}/info.json`)
+            let a = await fetch(`/Songs/${folder}/info.json`)
             let response = await a.json(); 
             cardcontainer.innerHTML = cardcontainer.innerHTML+`<div data-folder="${folder}" class="card">
             <div class="spotify-button">
                 <div class="play-icon"></div>
             </div>
-            <img src="/songs/${folder}/cover.jpg" alt=""
+            <img src="/Songs/${folder}/cover.jpg" alt=""
                 class="rounded">
             <h3>${response.title}</h3>
             <p>${response.description}</p>
@@ -89,7 +89,7 @@ async function displayAlbums(){
     }
 }
 async function main() {
-   await getsongs(`songs/3-Idiots`)
+   await getsongs(`Songs/3-Idiots`)
     playMusic(songs[0],true)
     await displayAlbums()
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
@@ -156,7 +156,7 @@ async function main() {
     })
     Array.from(document.getElementsByClassName("card")).forEach(e=>{
         e.addEventListener("click",async item=>{
-            await getsongs(`songs/${item.currentTarget.dataset.folder}`)
+            await getsongs(`Songs/${item.currentTarget.dataset.folder}`)
             playMusic(songs[0])
         })
     })
