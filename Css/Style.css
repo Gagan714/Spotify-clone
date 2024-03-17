@@ -402,6 +402,9 @@ h2 {
         height: 20px;
         width: 110px;
     }
+    .sign {
+        margin: 25px;
+    }
     .songinfo {
         font-size: 14px;
     }
